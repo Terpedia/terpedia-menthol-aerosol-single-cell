@@ -1,0 +1,65 @@
+{
+  "schema_version": 1,
+  "generator": "terputer-report-generator-v2",
+  "specification_schema_version": 2,
+  "manifest": "research/menthol-aerosol-single-cell/report-spec.json",
+  "manifest_sha256": "ccf729d941daaa4925c6c60b7eff00f3077251317d619c7d3c69cf934996cd95",
+  "notebook": "notebooks/gse263903_menthol_aerosol.ipynb",
+  "notebook_sha256": "08547478f7aa57596c69c5780604ec06172e8e4f286760b4b9e131fd10f0d9ec",
+  "executed_code_cells": 2,
+  "notebook_execution_receipt": "research/execution-receipts/gse263903_menthol_aerosol.json",
+  "notebook_execution_receipt_sha256": "9e3daca6a6a4383579c93bca3d7cb796d33b70e6d3f58c386d7fdc07234d2b98",
+  "artifact_sha256": {
+    "research/menthol-aerosol-single-cell/results/analysis_summary.json": "6146012540e8875fe5a2e1f79b459a4e9c0bad1d1b54e69bd54e0530e178e343",
+    "research/menthol-aerosol-single-cell/results/contrast_summary.tsv": "c31828ae13eaa69edf904e52739c4b3c2f7e3848783748224a4c45f61115f5d3",
+    "research/menthol-aerosol-single-cell/results/marker_bins.tsv": "226feee11dad804cb31a948d34583a868ccea722ad99515e747fd9dfe908bb23",
+    "research/menthol-aerosol-single-cell/results/sample_qc.tsv": "bf661b62bab43437b45709e49bbe1b3151085fa7b201dd0e5d84120248175ab0",
+    "research/menthol-aerosol-single-cell/results/target_pseudobulk.tsv": "7ac64ba74cc9ca74bb0173c9b69b476b115aaec5f001b668d4c410ce640617b5"
+  },
+  "input_sha256": {
+    "research/menthol-aerosol-single-cell/data/GSM8207273_Sample_S0102_filtered_feature_bc_matrix.h5": "f3995580aa01e21768bcf86dcd22f3169b657bf897ec06739a8f717c8c682260",
+    "research/menthol-aerosol-single-cell/data/GSM8207274_Sample_S0607_filtered_feature_bc_matrix.h5": "8e62b4ff72e94f1d397873bdc4dd311b90165db229183129f24b8bb6baa90f3d",
+    "research/menthol-aerosol-single-cell/data/GSM8207275_Sample_S1112_filtered_feature_bc_matrix.h5": "4a2f1d2e02c4bf20322b4b160673534cd42875026a90f8ba35c4ca9541f8e56f",
+    "research/menthol-aerosol-single-cell/data/GSM8207276_Sample_S1617_filtered_feature_bc_matrix.h5": "9120b79bee709ad6a4e0b0e961449cb612d5e5648c219d2c7b8053702bfab259",
+    "research/menthol-aerosol-single-cell/data/GSM8207279_Sample_S6364_filtered_feature_bc_matrix.h5": "987cf40deacf72e1fa353140fc3ce8d00a3008567f0b07d2260ee8d654921bd8",
+    "research/menthol-aerosol-single-cell/data/GSM8207280_Sample_S6869_filtered_feature_bc_matrix.h5": "60018876030674d8edaa9867a13d06b7322b0f93e4968cb2d6cd9462cc09b693",
+    "research/menthol-aerosol-single-cell/source_manifest.tsv": "cfdef442b4e0879825c5c8f9a5735edcae98a88afe6ab2d90e5b736b671c2e92"
+  },
+  "external_data_inputs": [
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207273_Sample_S0102_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207273/suppl/GSM8207273_Sample_S0102_filtered_feature_bc_matrix.h5",
+      "sha256": "f3995580aa01e21768bcf86dcd22f3169b657bf897ec06739a8f717c8c682260"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207274_Sample_S0607_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207274/suppl/GSM8207274_Sample_S0607_filtered_feature_bc_matrix.h5",
+      "sha256": "8e62b4ff72e94f1d397873bdc4dd311b90165db229183129f24b8bb6baa90f3d"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207275_Sample_S1112_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207275/suppl/GSM8207275_Sample_S1112_filtered_feature_bc_matrix.h5",
+      "sha256": "4a2f1d2e02c4bf20322b4b160673534cd42875026a90f8ba35c4ca9541f8e56f"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207276_Sample_S1617_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207276/suppl/GSM8207276_Sample_S1617_filtered_feature_bc_matrix.h5",
+      "sha256": "9120b79bee709ad6a4e0b0e961449cb612d5e5648c219d2c7b8053702bfab259"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207279_Sample_S6364_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207279/suppl/GSM8207279_Sample_S6364_filtered_feature_bc_matrix.h5",
+      "sha256": "987cf40deacf72e1fa353140fc3ce8d00a3008567f0b07d2260ee8d654921bd8"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207280_Sample_S6869_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207280/suppl/GSM8207280_Sample_S6869_filtered_feature_bc_matrix.h5",
+      "sha256": "60018876030674d8edaa9867a13d06b7322b0f93e4968cb2d6cd9462cc09b693"
+    }
+  ],
+  "claim_count": 8,
+  "observed_claim_count": 5,
+  "report_sha256": "9ee5b9bcc84d23a782fa88a55aa4aaa3802368912a4709c369b1cd4432c06f37",
+  "ledger_sha256": "0d8381b8a50affee66b36278819ca26d2fef30efbaaed26d39c0ebebda689677",
+  "limits": "Checks source URL syntax, local artifact presence, notebook execution metadata, and provenance; version 2 specifications also bind a recorded run to the notebook, observed-claim artifact hashes, and any declared local input hashes. Does not verify that a notebook read every declared input, live URL reachability, biological replication, or claim truth."
+}

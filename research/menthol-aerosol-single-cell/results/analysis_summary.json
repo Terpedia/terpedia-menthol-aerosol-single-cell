@@ -1,0 +1,19 @@
+{
+  "source_accession": "GSE263903",
+  "library_count": 6,
+  "qc_cells_total": 37962,
+  "qc_thresholds": {
+    "min_umi": 500,
+    "min_detected_genes": 200,
+    "max_mito_fraction": 0.2
+  },
+  "marker_bin_method": "Highest mean log1p(CP10K) across five marker genes; unassigned below 0.15; exploratory, not validated cell types",
+  "target_method": "Pooled raw UMI counts per marker bin and library; log2((gene_UMI + 0.5)/(bin_UMI + 1)*1e6)",
+  "comparison_method": "Within-sex difference of library-level log2 CPM; descriptive only; no p-values",
+  "limits": [
+    "Each library pools two mice of one sex; cells are not independent biological replicates.",
+    "MentholMint contains tobacco-derived nicotine and other aerosol constituents; the scRNA-seq set has no nicotine-only control.",
+    "GEO collection dates differ by condition, so date and treatment are confounded.",
+    "Marker-enriched bins are not validated cell-type annotations or differential-expression estimates."
+  ]
+}
