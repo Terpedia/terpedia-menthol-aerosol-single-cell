@@ -7,7 +7,7 @@ import nbformat
 
 intro = """# GSE263903: menthol-mint aerosol single-cell audit
 
-This notebook reads six public 10x filtered gene-count matrices: one male and one female library each for air, PG:VG vehicle, and menthol-mint e-cigarette aerosol. GEO identifies the exposure as `MentholMint`; the [paper](https://elifesciences.org/articles/106380) states that the flavored product contains nicotine and that two mice were pooled per sex and condition into each library. Collection dates differ by condition. There is no single-compound menthol arm or scRNA-seq nicotine-only arm.
+This notebook reads all ten public 10x filtered gene-count matrices: one male and one female library each for air, PG:VG vehicle, Mango, MentholMint, and Tobacco aerosol. The [paper](https://elifesciences.org/articles/106380) states that the flavored products contain nicotine and that two mice were pooled per sex and condition into each library. Collection dates differ by condition. There is no single-compound menthol arm or scRNA-seq nicotine-only arm.
 
 The analysis reports per-library QC, broad **marker-enriched bins** derived from simple gene panels, and targeted pseudobulk expression within each bin. Bins are exploratory and are not validated cell-type annotations. Contrasts are sex-stratified descriptions of pooled libraries. They have no p-values and cannot isolate menthol, nicotine, aerosol chemistry, sex, collection date, or cell composition effects. Cell counts are not biological replicate counts.
 """
@@ -25,8 +25,8 @@ STUDY = ROOT / "research/menthol-aerosol-single-cell"
 RESULTS = STUDY / "results"
 RESULTS.mkdir(parents=True, exist_ok=True)
 manifest = pd.read_csv(STUDY / "source_manifest.tsv", sep="\t", dtype=str)
-assert set(manifest.condition) == {"Air", "PGVG", "MentholMint"}
-assert len(manifest) == 6
+assert set(manifest.condition) == {"Air", "PGVG", "Mango", "MentholMint", "Tobacco"}
+assert len(manifest) == 10
 
 panels = {
     "Myeloid-marker": ["Lyz2", "Csf1r", "Adgre1", "Itgam", "S100a8"],
@@ -108,7 +108,9 @@ display(sample_qc[["gsm", "condition", "sex", "sac_date", "cells_raw", "cells_qc
 '''
 
 contrasts = r'''from itertools import product
-comparisons = [("MentholMint", "PGVG"), ("MentholMint", "Air"), ("PGVG", "Air")]
+comparisons = [("MentholMint", "PGVG"), ("MentholMint", "Air"),
+               ("MentholMint", "Mango"), ("MentholMint", "Tobacco"),
+               ("Mango", "PGVG"), ("Tobacco", "PGVG"), ("PGVG", "Air")]
 indexed = target_pseudobulk.set_index(["condition", "sex", "marker_bin", "gene"])
 contrast_rows = []
 for treated, control in comparisons:
@@ -136,7 +138,7 @@ summary = {
     "target_method": "Pooled raw UMI counts per marker bin and library; log2((gene_UMI + 0.5)/(bin_UMI + 1)*1e6)",
     "comparison_method": "Within-sex difference of library-level log2 CPM; descriptive only; no p-values",
     "limits": ["Each library pools two mice of one sex; cells are not independent biological replicates.",
-               "MentholMint contains tobacco-derived nicotine and other aerosol constituents; the scRNA-seq set has no nicotine-only control.",
+               "The flavored aerosols contain tobacco-derived nicotine and other constituents; the scRNA-seq set has no nicotine-only control.",
                "GEO collection dates differ by condition, so date and treatment are confounded.",
                "Marker-enriched bins are not validated cell-type annotations or differential-expression estimates."]
 }

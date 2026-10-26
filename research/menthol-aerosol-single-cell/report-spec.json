@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "slug": "menthol-aerosol-single-cell",
-  "title": "A compact single-cell audit of a menthol-mint e-cigarette aerosol arm in mouse lung",
+  "title": "A ten-library single-cell audit of flavored e-cigarette aerosols in mouse lung",
   "question": "Which metabolic and signaling responses to terpene exposure are reproducible, and which depend on cellular context or a specific target?",
   "notebook": "notebooks/gse263903_menthol_aerosol.ipynb",
   "execution_receipt": "research/execution-receipts/gse263903_menthol_aerosol.json",
@@ -27,6 +27,16 @@
       "sha256": "9120b79bee709ad6a4e0b0e961449cb612d5e5648c219d2c7b8053702bfab259"
     },
     {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207277_Sample_S4344_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207277/suppl/GSM8207277_Sample_S4344_filtered_feature_bc_matrix.h5",
+      "sha256": "6ab9593c7898acddd28763ea4b84637f9be6aa2691cbcf75494c3c134c7c5380"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207278_Sample_S4849_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207278/suppl/GSM8207278_Sample_S4849_filtered_feature_bc_matrix.h5",
+      "sha256": "0e4eab6f5685ed021d4585847e8b598399a226d89cfd76c318d5d5663b3ec65a"
+    },
+    {
       "path": "research/menthol-aerosol-single-cell/data/GSM8207279_Sample_S6364_filtered_feature_bc_matrix.h5",
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207279/suppl/GSM8207279_Sample_S6364_filtered_feature_bc_matrix.h5",
       "sha256": "987cf40deacf72e1fa353140fc3ce8d00a3008567f0b07d2260ee8d654921bd8"
@@ -35,6 +45,16 @@
       "path": "research/menthol-aerosol-single-cell/data/GSM8207280_Sample_S6869_filtered_feature_bc_matrix.h5",
       "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207280/suppl/GSM8207280_Sample_S6869_filtered_feature_bc_matrix.h5",
       "sha256": "60018876030674d8edaa9867a13d06b7322b0f93e4968cb2d6cd9462cc09b693"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207281_Sample_S8384_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207281/suppl/GSM8207281_Sample_S8384_filtered_feature_bc_matrix.h5",
+      "sha256": "2d11081621edc509895ff818a88549fcd0148f90a8f3dd62814e4e853ea8112d"
+    },
+    {
+      "path": "research/menthol-aerosol-single-cell/data/GSM8207282_Sample_S8889_filtered_feature_bc_matrix.h5",
+      "url": "https://ftp.ncbi.nlm.nih.gov/geo/samples/GSM8207nnn/GSM8207282/suppl/GSM8207282_Sample_S8889_filtered_feature_bc_matrix.h5",
+      "sha256": "dde254e0342a5888c5ff1299059d872a8f76666b707f2008c1796e7b78aca82c"
     }
   ],
   "sources": [
@@ -53,17 +73,17 @@
     {
       "id": "C01",
       "class": "source-reported",
-      "text": "GSE263903 contains mouse-lung single-cell libraries for air, PG:VG, mango, menthol-mint, and tobacco aerosol conditions. This audit selects the two sex-labeled libraries per air, PG:VG, and menthol-mint condition. The paper states that each library pools two mice of one sex, and that the flavored e-liquids contain tobacco-derived nicotine.",
+      "text": "GSE263903 contains mouse-lung single-cell libraries for air, PG:VG, Mango, MentholMint, and Tobacco aerosol conditions. This audit includes all ten libraries, one male and one female pool per condition. The paper states that each library pools two mice of one sex and that the flavored e-liquids contain tobacco-derived nicotine.",
       "sources": [
         "geo",
         "paper"
       ],
-      "limitation": "The GEO library is the measurable unit here; individual mouse variation cannot be recovered from pooled cells. The menthol-mint product is a mixture, not an isolated menthol exposure."
+      "limitation": "The GEO library is the measurable unit here; individual mouse variation cannot be recovered from pooled cells. MentholMint is a mixture, not an isolated menthol exposure."
     },
     {
       "id": "C02",
       "class": "observed",
-      "text": "The six selected filtered 10x matrices contain 39,608 barcodes; 37,962 pass this notebook's minimum 500 UMI, 200 detected genes, and at most 20% mitochondrial UMI thresholds. The male PG:VG library retains 2,451 cells, versus 7,199 to 7,771 in the air and menthol-mint libraries.",
+      "text": "The ten filtered 10x matrices contain 76,229 barcodes; 74,117 pass this notebook's minimum 500 UMI, 200 detected genes, and at most 20% mitochondrial UMI thresholds. The male PG:VG library retains 2,451 cells, the fewest of the ten libraries.",
       "sources": [
         "geo"
       ],
@@ -125,12 +145,24 @@
     {
       "id": "C07",
       "class": "source-reported",
-      "text": "The paper reports flavor-dependent aerosol metal levels and a nicotine-only control for selected follow-up assays, but GEO's ten single-cell libraries do not contain a nicotine-only scRNA-seq arm. GEO records the selected PG:VG, air, and menthol-mint library collection dates as October 20, October 21, and November 11, 2022.",
+      "text": "The paper reports flavor-dependent aerosol metal levels and a nicotine-only control for selected follow-up assays, but GEO's ten single-cell libraries do not contain a nicotine-only scRNA-seq arm. GEO records the PG:VG, air, Mango, MentholMint, and Tobacco collection dates as October 20, October 21, November 4, November 11, and November 18, 2022, respectively.",
       "sources": [
         "geo",
         "paper"
       ],
       "limitation": "Treatment and collection date are confounded in these archived libraries; the study cannot isolate a menthol-specific transcriptional effect."
+    },
+    {
+      "id": "C09",
+      "class": "observed",
+      "text": "Adding the other flavor arms changes the descriptive context. Within the myeloid-marker bin, MentholMint versus Mango Il1b differences are +0.30 male and +0.22 female log2 CPM, and Cxcl2 differences are +0.15 and +0.38. Versus Tobacco, the same genes have opposite signs between the two sex pools for Il1b (+0.34 male, -0.54 female) and Cxcl2 (+0.75 male, -0.88 female).",
+      "sources": [
+        "geo"
+      ],
+      "artifacts": [
+        "research/menthol-aerosol-single-cell/results/contrast_summary.tsv"
+      ],
+      "limitation": "Each flavor arm is a complex nicotine-containing formulation collected on a different date. These library-level descriptions cannot identify a flavor-specific molecule or infer sex interactions."
     },
     {
       "id": "C08",
@@ -147,7 +179,7 @@
     "C01",
     "C02",
     "C04",
-    "C05",
+    "C09",
     "C07"
   ],
   "sections": {
@@ -164,12 +196,14 @@
       "C03",
       "C04",
       "C05",
-      "C06"
+      "C06",
+      "C09"
     ],
     "interpretation": [
       "C04",
       "C05",
-      "C06"
+      "C06",
+      "C09"
     ],
     "limitations": [
       "C01",
@@ -178,7 +212,8 @@
       "C04",
       "C05",
       "C06",
-      "C07"
+      "C07",
+      "C09"
     ],
     "next_steps": [
       "C08"

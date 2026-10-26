@@ -2,24 +2,28 @@
   "schema_version": 2,
   "runner": "terputer-notebook-runner-v1",
   "notebook": "notebooks/gse263903_menthol_aerosol.ipynb",
-  "source_notebook_sha256": "b85ff668924ef4b20c2c8a8448469f6660688d78249af3448c758dba217e47b9",
-  "notebook_sha256": "08547478f7aa57596c69c5780604ec06172e8e4f286760b4b9e131fd10f0d9ec",
+  "source_notebook_sha256": "72e5d7c4085ccb3e3a81bf66c4afe918405c0cbbd12a0c8138c6eee464881b18",
+  "notebook_sha256": "58963d2fe394326848261f3f38ae6b0a9fa6c497aa53b32edc31c80651a2ce77",
   "executed_code_cells": 2,
   "artifacts_written": {
-    "research/menthol-aerosol-single-cell/results/sample_qc.tsv": "bf661b62bab43437b45709e49bbe1b3151085fa7b201dd0e5d84120248175ab0",
-    "research/menthol-aerosol-single-cell/results/marker_bins.tsv": "226feee11dad804cb31a948d34583a868ccea722ad99515e747fd9dfe908bb23",
-    "research/menthol-aerosol-single-cell/results/target_pseudobulk.tsv": "7ac64ba74cc9ca74bb0173c9b69b476b115aaec5f001b668d4c410ce640617b5",
-    "research/menthol-aerosol-single-cell/results/contrast_summary.tsv": "c31828ae13eaa69edf904e52739c4b3c2f7e3848783748224a4c45f61115f5d3",
-    "research/menthol-aerosol-single-cell/results/analysis_summary.json": "6146012540e8875fe5a2e1f79b459a4e9c0bad1d1b54e69bd54e0530e178e343"
+    "research/menthol-aerosol-single-cell/results/sample_qc.tsv": "f1b702c4dc545ebe59caf10c99c005dffb8c261d0e3db24af364c572f4632bd6",
+    "research/menthol-aerosol-single-cell/results/marker_bins.tsv": "9c1918a012ed3a5c9a3ce0712df0ccc7138a71b9cd51f9a1348f5350e313bf8b",
+    "research/menthol-aerosol-single-cell/results/target_pseudobulk.tsv": "47d82ef41b0a0977321bea5921e40b1f42fbbeaf05313914402cabc8ad633532",
+    "research/menthol-aerosol-single-cell/results/contrast_summary.tsv": "f7f3b135ebbf0247e92b26d2f59e9270f9d240437b14c701e212656fd9345717",
+    "research/menthol-aerosol-single-cell/results/analysis_summary.json": "a890b1c7384c55fb354418008e37fa2eea3bc609d6d2ff45d03b680e021497e2"
   },
   "inputs_pinned": {
     "research/menthol-aerosol-single-cell/data/GSM8207273_Sample_S0102_filtered_feature_bc_matrix.h5": "f3995580aa01e21768bcf86dcd22f3169b657bf897ec06739a8f717c8c682260",
     "research/menthol-aerosol-single-cell/data/GSM8207274_Sample_S0607_filtered_feature_bc_matrix.h5": "8e62b4ff72e94f1d397873bdc4dd311b90165db229183129f24b8bb6baa90f3d",
     "research/menthol-aerosol-single-cell/data/GSM8207275_Sample_S1112_filtered_feature_bc_matrix.h5": "4a2f1d2e02c4bf20322b4b160673534cd42875026a90f8ba35c4ca9541f8e56f",
     "research/menthol-aerosol-single-cell/data/GSM8207276_Sample_S1617_filtered_feature_bc_matrix.h5": "9120b79bee709ad6a4e0b0e961449cb612d5e5648c219d2c7b8053702bfab259",
+    "research/menthol-aerosol-single-cell/data/GSM8207277_Sample_S4344_filtered_feature_bc_matrix.h5": "6ab9593c7898acddd28763ea4b84637f9be6aa2691cbcf75494c3c134c7c5380",
+    "research/menthol-aerosol-single-cell/data/GSM8207278_Sample_S4849_filtered_feature_bc_matrix.h5": "0e4eab6f5685ed021d4585847e8b598399a226d89cfd76c318d5d5663b3ec65a",
     "research/menthol-aerosol-single-cell/data/GSM8207279_Sample_S6364_filtered_feature_bc_matrix.h5": "987cf40deacf72e1fa353140fc3ce8d00a3008567f0b07d2260ee8d654921bd8",
     "research/menthol-aerosol-single-cell/data/GSM8207280_Sample_S6869_filtered_feature_bc_matrix.h5": "60018876030674d8edaa9867a13d06b7322b0f93e4968cb2d6cd9462cc09b693",
-    "research/menthol-aerosol-single-cell/source_manifest.tsv": "cfdef442b4e0879825c5c8f9a5735edcae98a88afe6ab2d90e5b736b671c2e92"
+    "research/menthol-aerosol-single-cell/data/GSM8207281_Sample_S8384_filtered_feature_bc_matrix.h5": "2d11081621edc509895ff818a88549fcd0148f90a8f3dd62814e4e853ea8112d",
+    "research/menthol-aerosol-single-cell/data/GSM8207282_Sample_S8889_filtered_feature_bc_matrix.h5": "dde254e0342a5888c5ff1299059d872a8f76666b707f2008c1796e7b78aca82c",
+    "research/menthol-aerosol-single-cell/source_manifest.tsv": "fb3d416ce5532fda24da88bd7cd83fbe25872775b3a59621e8f97fe974e78a60"
   },
   "python_version": "3.12.11",
   "environment": {
@@ -72,5 +76,5 @@
       "wcwidth": "0.9.4"
     }
   },
-  "completed_at_utc": "2026-10-26T20:26:28.014815+00:00"
+  "completed_at_utc": "2026-10-26T21:00:08.881251+00:00"
 }
